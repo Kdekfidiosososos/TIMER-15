@@ -1,0 +1,25 @@
+Import time
+
+# Convert the timer to seconds
+
+Total_time = 15 * 60
+
+# Timer countdown
+
+For remaining in range(total_time, 0, -1):
+
+Minutes, seconds = divmod(remaining, 60)
+
+If remaining > 60:
+
+Color = "\033[93m" # Orange
+
+Else:
+
+Color = "\033[91m" # red
+
+Print(f"{color}{minutes:02}:{seconds:02}\033[0m", end="\r")
+
+Time.sleep(1)
+
+Print("\033[91m00:00\033[0m") # at the end of the timer
